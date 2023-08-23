@@ -1,0 +1,660 @@
+:root {
+  --primary: #0062ff;
+  --heading: #00083d;
+  --text: #5b6e80;
+  --secondary: #6b3eff;
+  --logo: #463f69;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 76px;
+  line-height: 1.5;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  background-color: white;
+  z-index: 100;
+}
+a {
+  -webkit-tap-highlight-color: transparent !important;
+  text-decoration: none;
+}
+
+.content {
+  max-width: 1080px;
+}
+/* Style for Navigation Bar */
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+  height: 100%;
+  opacity: 1;
+}
+
+.nav-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 42px;
+}
+.title {
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1.25rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  color: var(--primary);
+  opacity: 1;
+  transition: opacity 0.5s;
+  user-select: none;
+  margin-left: 6px;
+}
+
+.title::after {
+  color: var(--primary);
+}
+.nav-link {
+  font-size: 1.25rem;
+  margin-left: 32px;
+  color: var(--text);
+  transition: color 0.5s ease;
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+/* ***** navigation ends here **** */
+
+/* MOBILE NAVIGATION CSS */
+.menubutton {
+  display: none;
+}
+.mobile_nav {
+  display: none;
+}
+
+/* DASHBOARD PAGE STYLES */
+
+.link-buttons {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.view-my-work {
+  -webkit-tap-highlight-color: transparent !important;
+
+  color: #fff;
+  padding: 12px 12px;
+  border-radius: 4px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: medium;
+  font-size: 1.12rem;
+  width: 136px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(90deg, #0062ff, #009bff, #0062ff);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  transition: all 0.7s ease;
+}
+.view-my-work:hover {
+  background-position: 0;
+  transition: all 0.7s ease;
+}
+
+.about-me {
+  font-family: "Quicksand", sans-serif;
+  font-weight: medium;
+  font-size: 1.2rem;
+  color: var(--primary);
+  transition: all 0.4s ease-in-out;
+  -webkit-tap-highlight-color: transparent !important;
+}
+.about-me:hover {
+  color: #009bff;
+  transition: all 0.4s ease-in-out;
+}
+
+.container {
+  display: flex;
+  margin: 0px auto;
+  display: flex;
+  line-height: 1.5;
+  gap: 16px;
+}
+.main-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 95vh;
+}
+
+@keyframes slidefromright {
+  0% {
+    left: 160%;
+  }
+  100% {
+    left: 80%;
+  }
+}
+
+.background {
+  height: 600px;
+  width: 600px;
+  background-color: lightblue;
+  position: absolute;
+  z-index: -50;
+  top: -23vh;
+  transform: rotate(45deg);
+  animation: slidefromright 2s ease;
+  left: 80%;
+  border-radius: 18px;
+}
+/* blue rectange background behaviour */
+@media (min-width: 1366px) {
+  .background {
+    height: 100vh;
+    width: 100vh;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 28vh;
+  width: 60%;
+}
+
+.greeting,
+.description {
+  font-size: 1.6rem;
+  color: var(--text);
+}
+.work-title {
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  width: 80%;
+  color: var(--heading);
+}
+.photo {
+  /* display: flex;
+  align-items: flex-end */
+  font-family: "Courier Prime", monospace;
+  color: var(--primary);
+  font-size: 0.6rem;
+  width: 35%;
+  height: 90vh;
+}
+.design-code {
+  display: inline-block;
+  background-color: #fff;
+  padding: 26px 32px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-top: 30vh;
+  position: relative;
+  right: -10vw;
+}
+
+.colour-pallete {
+  position: absolute;
+  display: flex;
+  width: 232px;
+  height: 56px;
+  padding: 0px 8px;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  right: 116px;
+  bottom: -38px;
+}
+.colour-pallete div {
+  -webkit-tap-highlight-color: transparent;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: var(--heading);
+  transition: transform 0.2s ease;
+}
+/* .colour-pallete div:hover {
+  transform: scale(1.09);
+  transition: transform 0.3s ease;
+} */
+.colour-pallete .a {
+  background-color: var(--primary);
+}
+.colour-pallete .b {
+  background-color: lightblue;
+}
+.colour-pallete .c {
+  background-color: var(--logo);
+}
+.colour-pallete .d {
+  background-color: var(--heading);
+}
+.colour-pallete .e {
+  background-color: var(--text);
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 100% 90%;
+  }
+  25% {
+    transform: rotate(-20deg);
+    transform-origin: 100% 90%;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: 100% 90%;
+  }
+  75% {
+    transform: rotate(20deg);
+    transform-origin: 100% 90%;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 100% 90%;
+  }
+}
+
+.hand {
+  animation-iteration-count: 10;
+  animation-name: shake;
+  animation-duration: 0.2s;
+  position: absolute;
+  margin-left: 8px;
+}
+
+/***** Styling for projects section ******/
+.projects-list {
+  border-radius: 4px;
+}
+.project-section {
+  margin-top: 60px;
+  padding: 72px 0px 72px 0px;
+  background-image: linear-gradient(180deg, #fff, #f6f6f6);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.projects-container {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects-container h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: medium;
+  color: var(--heading);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.projects-container p {
+  color: var(--text);
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 80%;
+  margin-top: 18px;
+  line-height: 1.5;
+}
+
+.projects {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  grid-gap: 30px;
+}
+.project {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* common inside project */
+.project-description {
+  margin: 0px 36px;
+}
+/* Project Roby Display */
+.roby {
+  -webkit-tap-highlight-color: transparent !important;
+  height: 728px;
+  width: 100%;
+  position: relative;
+  margin-top: 64px;
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 5%), 0 16px 64px 0 rgb(0 0 0 / 10%);
+}
+.roby-container {
+  background-color: #141414;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.roby-container:hover {
+  transform: scale(1.03);
+  transition: transform 0.5s;
+}
+.roby-title {
+  margin-top: 36px;
+  color: #fff;
+}
+
+.roby-heading {
+  color: #fff !important;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+
+.roby-img {
+  background-image: url("/assets/images/roby-img.jpeg");
+  background-size: contain;
+  background-position: -35 0;
+  position: relative;
+  border-radius: 12px;
+  z-index: -1;
+  height: 384px;
+  width: 683px;
+  top: 48px;
+  right: -56px;
+}
+
+/* Project Smart Home */
+.smart-home {
+  -webkit-tap-highlight-color: transparent !important;
+  height: 728px;
+  width: 100%;
+  position: relative;
+}
+.smart-home-container {
+  background-color: #dfddea;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.smart-home-container:hover {
+  transform: scale(1.03);
+  transition: transform 0.5s;
+}
+.smart-home-title {
+  margin-top: 38px;
+  color: #7737f7 404572;
+}
+.smart-home-heading {
+  color: #404572 !important;
+}
+.smart-home-img {
+  position: absolute;
+  height: 384px;
+  width: 683px;
+  background-image: url("/assets/images/smart-home.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 30%;
+  right: -40%;
+}
+
+@media (max-width: 1020px) {
+  .content {
+    max-width: 768px;
+  }
+  .design-code {
+    right: -4vh;
+  }
+  /* Projects */
+  .projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  /* Shoe store project */
+  .roby-img {
+    height: 512px;
+    width: 910px;
+  }
+  /* Smart Home project */
+  .smart-home-img {
+    height: 512px;
+    width: 910px;
+    top: auto;
+    bottom: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navigation for Mobile */
+  nav {
+    padding: 0px 12px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .menubutton {
+    -webkit-tap-highlight-color: transparent !important;
+    display: block;
+    margin-right: 26px;
+    width: 22px;
+    height: 16px;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menubutton.animate {
+    transform: rotate(180deg);
+  }
+
+  .menubutton:not(.animate):hover .menubutton__line,
+  .menubutton:not(.animate):hover .menubutton__line:after,
+  .menubutton:not(.animate):hover .menubutton__line:before {
+    background: #0062ff;
+  }
+
+  .menubutton__line,
+  .menubutton__line:after,
+  .menubutton__line:before {
+    border-radius: 9999px;
+    width: 22px;
+    height: 2px;
+  }
+  .menubutton__line {
+    display: block;
+    position: relative;
+    transform: translateY(7px);
+    background: #5b6e80;
+    background-color: #5b6e80;
+  }
+
+  .menubutton__line:after,
+  .menubutton__line:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    background: #5b6e80;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menubutton__line:before {
+    width: 20px;
+    bottom: 7px;
+  }
+  .menubutton__line:after {
+    width: 14px;
+    top: 7px;
+  }
+
+  .menubutton__line:after,
+  .menubutton__line:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    background: #5b6e80;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menubutton__line.animate:before {
+    width: 14px;
+    transform: rotate(45deg) translateX(4px);
+  }
+  .menubutton__line.animate:after {
+    width: 14px;
+    transform: rotate(-45deg) translateX(4px);
+  }
+  /* Navigation Sidebar Styling */
+  .mobile_nav {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .active {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .mobile_nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    width: 100vw;
+    margin-top: 136px;
+  }
+  .mobile_nav-link {
+    font-size: 1.3rem;
+    color: var(--text);
+    transition: color 0.5s ease;
+  }
+  .mob-contact,
+  .mobile_nav-link:hover {
+    color: var(--primary);
+  }
+
+  .nav-footer {
+    background-color: rgb(246, 246, 246);
+    height: 20vh;
+    margin: 0px;
+    border-top: 1px solid rgb(226, 232, 240);
+  }
+
+  .mob-btn {
+    height: 18px;
+    width: 156px;
+    border-radius: 24px;
+    padding: auto 32px;
+  }
+
+  /* Container sizes for Mobile */
+  .container {
+    padding-left: 28px;
+    padding-right: 28px;
+    flex-direction: column;
+    line-height: 1.2;
+    gap: 48px;
+  }
+  .background {
+    display: none;
+  }
+  .intro {
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    padding-top: 136px;
+  }
+  .greeting,
+  .description {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .work-title {
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: center;
+  }
+  .photo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 264px;
+  }
+  .design-code {
+    right: 0px;
+    margin: 0px auto auto;
+  }
+  .link-buttons {
+    justify-content: center;
+    margin-top: 32px;
+  }
+  .colour-pallete {
+    right: 42px;
+  }
+  /* projects section for mobile view */
+  .project-section {
+    margin-top: 0px;
+  }
+  .projects-container {
+    padding: 0px 16px;
+  }
+  .projects-container h1 {
+    font-size: 1.6rem;
+  }
+  .projects-container p {
+    font-size: 1.2rem;
+    max-width: 95%;
+    line-height: 1.2;
+  }
+  /* shoe store project */
+  .roby-img {
+    background-image: url("/assets/images/roby-img-mobile.jpeg");
+    background-position: 0 0;
+    height: 640px;
+    width: 360px;
+    right: -10%;
+  }
+  /* Smart Home Project */
+  .smart-home-img {
+    height: 512px;
+    width: 910px;
+    top: auto;
+    bottom: 32px;
+    right: auto;
+    left: 8vw;
+  }
+}
